@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.constainer {
+    display: flex;
+    justify-content: center;
+}
+
+
+h1 {
+    text-align: center;
+    margin-top: 70px;
+    border: 1px solid;
+    border-radius: 30px;
+    width: 20%;
+    background-color: rgb(255, 180, 89);
+}
+
+.containerList {
+    display: flex;
+    justify-content: center;
+}
+
+#listMail {
+    background-color: rgb(234, 234, 234);
+}
+
+li {
+
+    margin: 10px;
+    list-style: none;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bottone {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+button {
+    padding: 7px;
+    border-radius: 20px;
+    background-color: rgb(255, 180, 89);
+}
