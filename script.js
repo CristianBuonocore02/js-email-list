@@ -18,15 +18,23 @@
 
 
 const ulEl = document.getElementById("listMail");
+const botton = document.getElementById("generateBtn")
 
 const mailRandom = "https://flynn.boolean.careers/exercises/api/random/mail";
 
-for (let i = 0; i < 10; i++) {
-    fetch(mailRandom)
-        .then(response => response.json())
-        .then(data => {
-            const liEl = document.createElement("li");
-            liEl.innerHTML = data.response; // usa "response" con la minuscola
-            ulEl.appendChild(liEl);
-        });
+botton.addEventListener("click", generaEmail)
+
+function generaEmail() {
+    // Puliamo la lista prima di generare nuove email
+    ulEl.innerHTML = "";
+
+    for (let i = 0; i < 10; i++) {
+        fetch(mailRandom)
+            .then(response => response.json())
+            .then(data => {
+                const liEl = document.createElement("li");
+                liEl.innerHTML = data.response;
+                ulEl.appendChild(liEl);
+            });
+    }
 }
