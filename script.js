@@ -17,17 +17,16 @@
 // Aggiorna la DOM inserendo gli indirizzi generati in una lista
 
 
-const ulEl = document.getElementById()
+const ulEl = document.getElementById("listMail");
 
+const mailRandom = "https://flynn.boolean.careers/exercises/api/random/mail";
 
-const mailRandom = "https://flynn.boolean.careers/exercises/api/random/mail"
-
-for (i = 0; i < 10; i++) {
+for (let i = 0; i < 10; i++) {
     fetch(mailRandom)
-        .then(Response => Response.json())
+        .then(response => response.json())
         .then(data => {
-            console.log(data);
-
-
-        })
+            const liEl = document.createElement("li");
+            liEl.innerHTML = data.response; // usa "response" con la minuscola
+            ulEl.appendChild(liEl);
+        });
 }
